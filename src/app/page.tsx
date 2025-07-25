@@ -8,6 +8,7 @@ import InputForm from "../components/InputForm";
 import PlaceholderInfo from "../components/PlaceholderInfo";
 import CalendarIconDisplay from "../components/CalendarIconDisplay";
 import Footer from "../components/Footer";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function Home() {
   // Animation state for glowing and fading icons
@@ -137,9 +138,22 @@ export default function Home() {
               Export your Quest schedule in seconds.
             </h1>
             <div className="mt-4">
-              <p className="text-base sm:text-md font-regular text-center" style={{ color: '#C9C9C9' }}>
-                Go to Quest&nbsp;&nbsp;›&nbsp;&nbsp;Class Schedule&nbsp;&nbsp;›&nbsp;&nbsp;Choose Term&nbsp;&nbsp;›&nbsp;&nbsp;Press “Continue”&nbsp;&nbsp;›&nbsp;&nbsp;List View
-              </p>
+              <div className="flex items-center justify-center gap-2">
+                <p className="text-base sm:text-md font-regular text-center" style={{ color: '#C9C9C9' }}>
+                  Go to Quest&nbsp;&nbsp;›&nbsp;&nbsp;Class Schedule&nbsp;&nbsp;›&nbsp;&nbsp;Choose Term&nbsp;&nbsp;›&nbsp;&nbsp;Press “Continue”&nbsp;&nbsp;›&nbsp;&nbsp;List View
+                </p>
+                <TooltipProvider>
+                  <Tooltip delayDuration={100}>
+                    <TooltipTrigger asChild>
+                      <span className="ml-1 flex items-center justify-center w-5 h-5 min-w-[1.25rem] min-h-[1.25rem] rounded-full bg-[#262626] text-[#E5E5E5] text-xs font-bold cursor-pointer select-none text-center hidden min-[675px]:flex" style={{ fontFamily: 'var(--font-inter-tight, Inter Tight, sans-serif)' }}>?
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" align="center" className="text-xs font-medium text-center">
+                      Navigate to this Quest page <br /> and follow the instructions below.
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
             </div>
           </div>
           {/* Add your main content here */}
