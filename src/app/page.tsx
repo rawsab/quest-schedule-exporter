@@ -21,6 +21,15 @@ export default function Home() {
   const inputFormRef = useRef<HTMLDivElement>(null);
   const [showDownArrow, setShowDownArrow] = useState(false);
 
+  // Fade-in animation states
+  const [showHeader, setShowHeader] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(false);
+  const [showInputForm, setShowInputForm] = useState(false);
+  const [showPlaceholders, setShowPlaceholders] = useState(false);
+  const [showCalendarIcons, setShowCalendarIcons] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
+
   // Helper for fade duration (should match CSS)
   const FADE_DURATION = 1100;
 
@@ -98,6 +107,27 @@ export default function Home() {
     };
   }, []);
 
+  // Fade-in animation sequence
+  useEffect(() => {
+    const timer = setTimeout(() => setShowLogo(true), 0);
+    const timer2 = setTimeout(() => setShowHeader(true), 100);
+    const timer3 = setTimeout(() => setShowInstructions(true), 300);
+    const timer4 = setTimeout(() => setShowInputForm(true), 500);
+    const timer5 = setTimeout(() => setShowPlaceholders(true), 700);
+    const timer6 = setTimeout(() => setShowCalendarIcons(true), 900);
+    const timer7 = setTimeout(() => setShowFooter(true), 1100);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+      clearTimeout(timer4);
+      clearTimeout(timer5);
+      clearTimeout(timer6);
+      clearTimeout(timer7);
+    };
+  }, []);
+
   function handleArrowClick() {
     if (!inputFormRef.current) return;
     const header = document.querySelector("header");
@@ -117,14 +147,14 @@ export default function Home() {
         {/* Foreground content goes here */}
         <div className="relative z-10 flex flex-col items-center pt-24">
           {/* Logo and gradient overlay, absolutely positioned behind tagline and subtext */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-[180px] h-[180px] pointer-events-none select-none z-0">
+          <div className={`absolute left-1/2 -translate-x-1/2 -top-8 w-[180px] h-[180px] pointer-events-none select-none z-0 transition-all duration-1000 ease-out ${showLogo ? 'opacity-80 scale-100' : 'opacity-0 scale-95'}`}>
             <Image
               src="/logo/LogoDark.png"
               alt="App Logo"
               width={180}
               height={180}
               priority
-              className="z-10 opacity-80"
+              className="z-10"
             />
             <div
               className="absolute top-0 left-0 w-full h-full z-20"
@@ -134,13 +164,13 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 w-[90vw] max-w-4xl flex flex-col items-center">
-            <h1 className="text-2xl sm:text-[2.5rem] font-medium text-center drop-shadow-lg" style={{ color: '#E5E5E5' }}>
+            <h1 className={`text-2xl sm:text-[2.5rem] font-medium text-center drop-shadow-lg transition-all duration-700 ease-out ${showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ color: '#E5E5E5' }}>
               Export your Quest schedule in seconds.
             </h1>
-            <div className="mt-4">
+            <div className={`mt-4 transition-all duration-700 ease-out delay-100 ${showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="flex items-center justify-center gap-2">
                 <p className="text-base sm:text-md font-regular text-center" style={{ color: '#C9C9C9' }}>
-                  Go to Quest&nbsp;&nbsp;›&nbsp;&nbsp;Class Schedule&nbsp;&nbsp;›&nbsp;&nbsp;Choose Term&nbsp;&nbsp;›&nbsp;&nbsp;Press “Continue”&nbsp;&nbsp;›&nbsp;&nbsp;List View
+                  Go to Quest&nbsp;&nbsp;›&nbsp;&nbsp;Class Schedule&nbsp;&nbsp;›&nbsp;&nbsp;Choose Term&nbsp;&nbsp;›&nbsp;&nbsp;Press "Continue"&nbsp;&nbsp;›&nbsp;&nbsp;List View
                 </p>
                 <TooltipProvider>
                   <Tooltip delayDuration={100}>
@@ -157,7 +187,7 @@ export default function Home() {
             </div>
           </div>
           {/* Add your main content here */}
-          <div className="mt-8 grid grid-cols-4 gap-6 max-w-[712px] mx-0 [@media(max-width:800px)]:grid-cols-2">
+          <div className={`mt-8 grid grid-cols-4 gap-6 max-w-[712px] mx-0 [@media(max-width:800px)]:grid-cols-2 transition-all duration-700 ease-out ${showInstructions ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <InstructionSquare
               primary={`${modifierKey} + A`}
               secondary="Select Quest page."
@@ -227,14 +257,14 @@ export default function Home() {
               }}
             />
           </div>
-          <div className="mt-10 flex justify-center" ref={inputFormRef}>
+          <div className={`mt-10 flex justify-center transition-all duration-700 ease-out ${showInputForm ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} ref={inputFormRef}>
             <InputForm />
           </div>
-          <div className="mt-12 w-full max-w-[712px] mx-auto flex items-center gap-2 justify-center">
+          <div className={`mt-12 w-full max-w-[712px] mx-auto flex items-center gap-2 justify-center transition-all duration-700 ease-out ${showPlaceholders ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <img src="/icons/ph_dark.svg" alt="Placeholders" height={20} style={{ height: 20, width: 'auto' }} draggable={false} />
             <span className="text-[#E5E5E5] text-lg font-medium" style={{ fontFamily: 'var(--font-inter-tight, Inter Tight, sans-serif)' }}>Available Placeholders</span>
           </div>
-          <div className="mt-6 w-full max-w-[712px] mx-0 grid grid-cols-3 gap-4 [@media(max-width:530px)]:grid-cols-2">
+          <div className={`mt-6 w-full max-w-[712px] mx-0 grid grid-cols-3 gap-4 [@media(max-width:530px)]:grid-cols-2 transition-all duration-700 ease-out delay-100 ${showPlaceholders ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <PlaceholderInfo top="@code" middle="Course code" bottom="CS 452" />
             <PlaceholderInfo top="@section" middle="Course section number" bottom="001" />
             <PlaceholderInfo top="@name" middle="Course name" bottom="Real-time Programming" />
@@ -242,10 +272,12 @@ export default function Home() {
             <PlaceholderInfo top="@location" middle="Building and room number" bottom="DWE 3522A" />
             <PlaceholderInfo top="@prof" middle="Course instructor" bottom="William B Cowan" />
           </div>
-          <div className="mt-20 mb-5">
+          <div className={`mt-20 mb-5 transition-all duration-700 ease-out ${showCalendarIcons ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <CalendarIconDisplay />
           </div>
-          <Footer />
+          <div className={`transition-all duration-700 ease-out ${showFooter ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <Footer />
+          </div>
         </div>
       </div>
       {/* Bottom gradient overlay */}
