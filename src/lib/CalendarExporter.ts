@@ -95,7 +95,7 @@ export class CalendarExporter {
 
     addLine('BEGIN:VCALENDAR');
     addLine('VERSION:2.0');
-    addLine('PRODID:-//questscheduleexporter.stephenli.ca//EN');
+    addLine('PRODID:-//questporter.rawsab.com//EN');
 
     for (const course of this._courses) {
       const printer = course.printer(this._summary, this._description);
