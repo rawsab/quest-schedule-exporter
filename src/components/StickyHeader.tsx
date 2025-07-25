@@ -53,7 +53,7 @@ export const StickyHeader: React.FC = () => {
           </a>
           {/* GitHub button */}
           <a
-            href="https://github.com/"
+            href="https://github.com/rawsab/quest-schedule-exporter"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-3 py-1.5 rounded-md hover:bg-[#232323] transition-colors"
