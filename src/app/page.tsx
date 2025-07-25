@@ -176,8 +176,15 @@ export default function Home() {
                 <TooltipProvider>
                   <Tooltip delayDuration={100}>
                     <TooltipTrigger asChild>
-                      <span className="ml-1 flex items-center justify-center w-5 h-5 min-w-[1.25rem] min-h-[1.25rem] rounded-full bg-[#262626] text-[#E5E5E5] text-xs font-bold cursor-pointer select-none text-center hidden min-[675px]:flex" style={{ fontFamily: 'var(--font-inter-tight, Inter Tight, sans-serif)' }}>?
-                      </span>
+                      <a 
+                        href="https://github.com/rawsab/quest-schedule-exporter#how-to-use-questporter" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="ml-1 flex items-center justify-center w-5 h-5 min-w-[1.25rem] min-h-[1.25rem] rounded-full bg-[#262626] text-[#E5E5E5] text-xs font-bold cursor-pointer select-none text-center hidden min-[675px]:flex hover:bg-[#333333] transition-colors duration-200" 
+                        style={{ fontFamily: 'var(--font-inter-tight, Inter Tight, sans-serif)' }}
+                      >
+                        ?
+                      </a>
                     </TooltipTrigger>
                     <TooltipContent side="bottom" align="center" className="text-xs font-medium text-center">
                       Navigate to this Quest page <br /> and follow the instructions below.
