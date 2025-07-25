@@ -22,7 +22,7 @@ A modern web app for exporting your University of Waterloo Quest class schedule 
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/quest-schedule-exporter.git
+   git clone https://github.com/rawsab/quest-schedule-exporter.git
    cd quest-schedule-exporter
    ```
 2. **Install dependencies:**
