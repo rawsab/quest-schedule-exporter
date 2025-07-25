@@ -170,7 +170,7 @@ export default function Home() {
             <div className={`mt-4 transition-all duration-700 ease-out delay-100 ${showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="flex items-center justify-center gap-2">
                 <p className="text-base sm:text-md font-regular text-center" style={{ color: '#C9C9C9' }}>
-                  Go to Quest&nbsp;&nbsp;›&nbsp;&nbsp;Class Schedule&nbsp;&nbsp;›&nbsp;&nbsp;Choose Term&nbsp;&nbsp;›&nbsp;&nbsp;Press "Continue"&nbsp;&nbsp;›&nbsp;&nbsp;List View
+                  Go to Quest&nbsp;&nbsp;›&nbsp;&nbsp;Class Schedule&nbsp;&nbsp;›&nbsp;&nbsp;Choose Term&nbsp;&nbsp;›&nbsp;&nbsp;Press &quot;Continue&quot;&nbsp;&nbsp;›&nbsp;&nbsp;List View
                 </p>
                 <TooltipProvider>
                   <Tooltip delayDuration={100}>
