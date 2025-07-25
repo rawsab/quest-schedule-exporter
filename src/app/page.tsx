@@ -276,7 +276,7 @@ export default function Home() {
           <div className={`mt-20 mb-5 transition-all duration-700 ease-out ${showCalendarIcons ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <CalendarIconDisplay />
           </div>
-          <div className={`transition-all duration-700 ease-out ${showFooter ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`w-full transition-all duration-700 ease-out ${showFooter ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <Footer />
           </div>
         </div>
