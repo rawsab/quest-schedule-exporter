@@ -38,8 +38,12 @@ export const InputForm: React.FC = () => {
       );
       const ical = exporter.run();
       downloadFile(ical, questConfig.filename);
-    } catch (err: any) {
-      alert(err?.message || "Unable to generate iCalendar file! Please check your input.");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        alert(err.message);
+      } else {
+        alert("Unable to generate iCalendar file! Please check your input.");
+      }
     }
   }
 
