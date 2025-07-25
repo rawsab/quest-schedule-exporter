@@ -142,7 +142,8 @@ export default function Home() {
   return (
     <>
       <StickyHeader />
-      <div className="h-[20px]"></div>
+      <div className="h-[20px] min-[642px]:block hidden"></div>
+      <div className="h-[65px] max-[641px]:block hidden"></div>
       <div className="font-sans min-h-screen p-8 pb-10 sm:p-20 relative overflow-hidden">
         {/* Foreground content goes here */}
         <div className="relative z-10 flex flex-col items-center pt-24">
