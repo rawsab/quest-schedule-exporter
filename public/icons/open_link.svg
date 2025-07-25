@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>open_link</title>
+    <g id="Final-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="open_link" transform="translate(1.000000, 1.000000)">
+            <g id="↗" transform="translate(4.544811, 0.000000)" fill="#C9C9C9" fill-rule="nonzero">
+                <polygon id="Path" points="10.9179688 8.53515625 10.9179688 0 2.37304688 0 2.37304688 1.8359375 7.79296875 1.8359375 0 9.609375 1.29882812 10.9082031 9.08203125 3.125 9.08203125 8.53515625"></polygon>
+            </g>
+            <path d="M3.38318069,0.987706809 L3,0.987706809 C1.34314575,0.987706809 -4.4408921e-16,2.33085256 0,3.98770681 L0,12.4410093 C8.8817842e-16,14.0978635 1.34314575,15.4410093 3,15.4410093 L11.5368467,15.4410093 C13.1937009,15.4410093 14.5368467,14.0978635 14.5368467,12.4410093 L14.5368467,11.9082031 L14.5368467,11.9082031" id="Path-2" stroke="#C9C9C9" stroke-width="2"></path>
+        </g>
+    </g>
+</svg>

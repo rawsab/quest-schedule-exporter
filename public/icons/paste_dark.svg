@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="40px" viewBox="0 0 36 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <g id="Final-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="DarkMode" transform="translate(-744.000000, -433.000000)" stroke="#616262" stroke-width="2">
+            <g id="Group-26" transform="translate(312.500000, 263.000000)">
+                <g id="Group-4" transform="translate(432.500000, 171.000000)">
+                    <path d="M34,23 L34,6 C34,2.6862915 31.3137085,0 28,0 L6,0 C2.6862915,8.8817842e-16 8.8817842e-16,2.6862915 0,6 L0,32 C0,35.3137085 2.6862915,38 6,38 L19,38 L19,38" id="Path-10" stroke-linejoin="round"></path>
+                    <line x1="25" y1="37" x2="33" y2="29" id="Path-11"></line>
+                    <line x1="30.4234766" y1="38" x2="34" y2="34.4234766" id="Path-12"></line>
+                    <g id="Group-22" transform="translate(9.346358, 10.394487)">
+                        <line x1="0" y1="0.5" x2="15.6536417" y2="0.5" id="Path-13"></line>
+                        <line x1="0" y1="6.5" x2="5.53289679" y2="6.5" id="Path-13"></line>
+                        <line x1="0" y1="12.5" x2="9.14744854" y2="12.5" id="Path-13"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
