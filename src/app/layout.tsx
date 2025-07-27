@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter_Tight } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,6 +33,19 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="snOFUtkJWdWSSOA0DKvRet3UOcQjgm3kEo8tcj1Zn9g" />
       </head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-9ZJYLDGYVL"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-9ZJYLDGYVL');
+        `}
+      </Script>
       <body
         className={`${interTight.variable} ${geistMono.variable} antialiased`}
       >
