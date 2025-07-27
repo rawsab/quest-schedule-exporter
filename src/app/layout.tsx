@@ -21,6 +21,33 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "Questporter - Quest Schedule Exporter",
   description: "A tool for University of Waterloo students to export their Quest class schedule as an iCalendar file, which can be imported into any calendar app, such as Google Calendar, Apple Calendar, Outlook, and more. Simply copy and paste your Quest page into the Questporter and generate an iCalendar file.",
+  keywords: [
+    "Quest schedule",
+    "University of Waterloo",
+    "UWaterloo",
+    "class schedule",
+    "calendar export",
+    "iCalendar",
+    "Google Calendar",
+    "Apple Calendar",
+    "Outlook",
+    "schedule exporter",
+    "Questporter",
+    "student tools",
+    "academic calendar",
+    "course schedule"
+  ].join(", "),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
